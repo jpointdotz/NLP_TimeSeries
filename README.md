@@ -1,4 +1,4 @@
-Repo consists of 6 notebooks:
+Repo consists of 7 notebooks:
 
 1 - CNN_TransferLearning_Muffin_Chihuahua.ipynb - I am using transfer learning from Inceptionv3 (https://keras.io/api/applications/inceptionv3/). The data has been downloaded from Kaggle, and standard means such as ImageDataGenerator with warious augmentation functions has been provided. The training has not been done on top of the last layer but by unfreezing of more layers on top of layer 'mixed7' , even I intended to run 100 epoches, using Callback the accuray 98.5% has been reached after one epoch. 
 
@@ -11,3 +11,5 @@ Repo consists of 6 notebooks:
 5 - DNN_GridSeachCV_for_DNN_hyperparamaters.ipynb - I am using the standard dataset from Kaggle "California housing prices" for regression I have already used for other notebook. The data have been normalized as the distribution was quite skewed and some small adjustemnts done along. In this notebook I am using GridSearchCV for DNN Tensorflow model wrapped by KerasRegressor from SciKeras lib (there were similar wrapper from ScikitLearn which is not supported anymore. I have to tune n. of hidden layers, n. of neurons in these layers and learning rate of Adam optimizer. To shorten time there were only 50 Epochs done and as results we got the best parameters of learning rate 0.001, 1 hidden layer wwith 128 neurons. 
 
 6 - DNN_KerasTuner-Hyperband_for_DNN_hyperparameters.ipynb - The notebook as comparison to "DNN_GridSeachCV_for_DNN_hyperparamaters.ipynb" with using of Hyperband from KerasTuner to tune the very same parameters with the same def build_model() function to compare results on regression problem. In fact the same results as the best have been obtained - 0.001 learning rate of Adam, with 1 hidden layer and 128 neurons - results comparable to GridSearchCV, however based on several resources the KerasTuner is more robust and preferable to use instead of GridSearchCV due to utilizing of resources for computation. 
+
+7 - CNN_EDA_Animals_ClassWeights-TransferLearning.ipynb - The notebook with transfer learning on Animals dataset (>1GB), not having enough capacity to train ... training on Google Colab failed. The main point of the notebook was to compute weight of particular classes based on distribution within the dataset and include the Weight classes within model.fit() function. 
