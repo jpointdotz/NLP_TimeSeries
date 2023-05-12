@@ -15,3 +15,5 @@ Repo consists of 7 notebooks:
 7 - CNN_EDA_Animals_ClassWeights-TransferLearning.ipynb - The notebook with transfer learning on Animals dataset (>1GB), not having enough capacity to train ... training on Google Colab failed. The main point of the notebook was to compute weight of particular classes based on distribution within the dataset and include the Weight classes within model.fit() function. 
 
 8 - Chatting_with_GPT - "Chatting" with GPT in notebook - prompt coding to analyse, translate, conlude ... part of Moby Dick book with generating of Pandas/Seaborn code by GPT. 
+
+9 - OpenCV_Blur-Pixelation-Replacement-DNN-Caffee_model - using DNN Caffee pre-trained model to face detection and anonymize face with blur, pixelation and replacement options. 
